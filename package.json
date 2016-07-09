@@ -1,0 +1,35 @@
+{
+  "name": "uideveloper-test",
+  "version": "0.0.0",
+  "description": "Selz UI Developer Test",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "jshint src/",
+    "build": "npm run build:jade && npm run build:js && npm run build:scss",
+    "build:jade": "jade src/index.jade --out dist/",
+    "build:js": "cp src/widget.js dist/ && uglifyjs dist/widget.js --compress --output dist/widget.min.js --source-map dist/widget.min.js.map --source-map-url widget.min.js.map --prefix 1",
+    "build:scss": "cp src/widget.scss dist/ && node-sass dist/widget.scss dist/widget.min.css --output-style compressed --source-map dist/",
+    "dev": "npm run watch & browser-sync start --server 'dist/' --files 'dist/' --browser 'google chrome'",
+    "watch": "watch 'npm run build && npm run test' src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamshaylor/uideveloper-test.git"
+  },
+  "author": "Adam Shaylor <business@adamshaylor.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/adamshaylor/uideveloper-test/issues"
+  },
+  "homepage": "https://github.com/adamshaylor/uideveloper-test#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "jshint": "^2.9.2",
+    "node-sass": "^3.8.0",
+    "uglify-js": "^2.7.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "watch": "^0.19.1"
+  }
+}

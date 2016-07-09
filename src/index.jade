@@ -1,0 +1,92 @@
+doctype html
+html(lang='en', class='no-js')
+
+    head
+
+        title Selz UI Developer Test
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+
+        link(rel='apple-touch-icon', sizes='57x57', href='//selz.com/apple-touch-icon-57x57.png')
+        link(rel='apple-touch-icon', sizes='60x60', href='//selz.com/apple-touch-icon-60x60.png')
+        link(rel='apple-touch-icon', sizes='72x72', href='//selz.com/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon', sizes='76x76', href='//selz.com/apple-touch-icon-76x76.png')
+        link(rel='apple-touch-icon', sizes='114x114', href='//selz.com/apple-touch-icon-114x114.png')
+        link(rel='apple-touch-icon', sizes='120x120', href='//selz.com/apple-touch-icon-180x180.png')
+        link(rel='apple-touch-icon', sizes='144x144', href='//selz.com/apple-touch-icon-144x144.png')
+        link(rel='apple-touch-icon', sizes='152x152', href='//selz.com/apple-touch-icon-152x152.png')
+        link(rel='apple-touch-icon', sizes='180x180', href='//selz.com/apple-touch-icon-180x180.png')
+        link(rel='icon', href='//selz.com/favicon.ico?2')
+        link(rel='icon', type='image/png', href='//selz.com/favicon-32x32.png', sizes='32x32')
+        link(rel='icon', type='image/png', href='//selz.com/android-chrome-192x192.png', sizes='192x192')
+        link(rel='icon', type='image/png', href='//selz.com/favicon-96x96.png', sizes='96x96')
+        link(rel='icon', type='image/png', href='//selz.com/favicon-16x16.png', sizes='16x16')
+        meta(name='msapplication-TileColor', content='#6d48cc')
+        meta(name='msapplication-TileImage', content='//selz.com/mstile-144x144.png')
+        meta(name='msapplication-square150x150logo', content='//selz.com/mstile-150x150.png')
+        meta(name='msapplication-square310x310logo', content='//selz.com/mstile-310x310.png')
+        meta(name='msapplication-square70x70logo', content='//selz.com/mstile-70x70.png')
+        meta(name='msapplication-wide310x150logo', content='//selz.com/mstile-310x150.png')
+
+        link(rel='stylesheet', href='widget.min.css')
+
+    body
+
+        .sw-container
+
+            .sw-summary
+            
+                .sw-summary__title
+                    span.sw-summary__title-placeholder-text Lorem ipsum
+                
+                .sw-summary__prices
+                    .sw-summary__regular-price
+                        span.sw-summary__prices-placeholder-text Lorem
+                    .sw-summary__discount-price.sw-summary__discount-price--hidden
+                        span.sw-summary__prices-placeholder-text Lorem
+                    
+                .sw-summary__availability
+                    span.sw-summary__availability-placeholder-text Sit amet
+                    
+                .sw-summary__percent-discount.sw-summary__percent-discount--hidden
+                    .sw-summary__percent-discount-number
+                    .sw-summary__percent-discount-off off
+            
+            .sw-image
+            
+            .sw-details
+                span.sw-details__placeholder-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. At provident, fugit facilis consequuntur unde. Alias perspiciatis recusandae eaque fuga minus, pariatur eveniet distinctio commodi sit cumque omnis aut et repellendus.
+            
+            .sw-button-group
+                a.sw-buy-button(href='#').sw-buy-button--loading
+            
+            footer.sw-footer
+            
+                .sw-footer__cards.sw-footer__cards--hidden
+                    svg
+                        use(xlink:href="#embed-logo-visa")
+                    svg
+                        use(xlink:href="#embed-logo-mastercard")
+                    svg
+                        use(xlink:href="#embed-logo-amex")
+                    svg
+                        use(xlink:href="#embed-logo-discover")
+                    svg
+                        use(xlink:href="#embed-logo-jcb")
+                    svg
+                        use(xlink:href="#embed-logo-diners")
+
+                .sw-footer__paypal.sw-footer__paypal--hidden
+                    svg
+                        use(xlink:href="#embed-logo-paypal")
+                
+                .sw-footer__selz
+                    .sw-footer__selz-text Powered by
+                    a(href="http://selz.com")
+                        svg
+                            use(xlink:href="#embed-logo-selz")
+
+        script(src='//cdn.polyfill.io/v2/polyfill.min.js')
+        script(src='//cdnjs.cloudflare.com/ajax/libs/webfont/1.6.24/webfontloader.js')
+        script(src='widget.js')
